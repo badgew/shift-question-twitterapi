@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const _ = require('lodash');
 const express = require('express');
 const request = require('request');
@@ -6,7 +8,7 @@ const config = require('./config')
 
 // Express
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT;
 
 const T = new Twit(config);
 
