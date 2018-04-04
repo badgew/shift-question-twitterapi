@@ -40,7 +40,9 @@ const searchTwitter = function(req, res){
   // the Twitter search parameters
   let params = {
     q: req.query.keyword,
-    count: req.query.count || 100
+    count: req.query.count || 100,
+    tweet_mode: 'extended',
+    lang: 'en'
   };
 
   // after Twitter comes back to us with a response, do this:
